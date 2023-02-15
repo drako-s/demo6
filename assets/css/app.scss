@@ -1,0 +1,643 @@
+$light : #fff;
+$lighter : #F6F7FA;
+$dark:#242424;
+$darker:#111111;
+$border : #242423;
+$text : #686E85;
+$secondary: #111111;
+$secondary-light: #ff7700;
+$primary: #FFC000;
+$boxshadow :0px 0px 14px rgba($dark, 0.28);
+$border-radius-small : 5px;
+$border-radius-large : 100px;
+$tertiary : #FFD532;
+$text-light : #717275;
+$gradient : radial-gradient(circle, $primary 0%, $secondary 100%); 
+$fs-small: 16px;
+$fs-normal:18px;
+$fs-big:20px;
+$fs-bigger:26px;
+$fs-h2: 42px;
+$fs-h1: 56px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $light;
+    color: $text;
+}
+
+p {
+    font-size: $fs-small;
+    font-weight: 400;
+}
+header {
+    position: relative;
+    transition: all .3s;
+    background: linear-gradient(to right, $primary 50% , $secondary 50% );
+}
+
+header .sticky-wrapper {
+    position: relative;
+    z-index: 222;
+    height: auto !important;    
+}
+
+header .sticky-wrapper.is-sticky { 
+    animation: show 0.31s linear;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+.is-sticky .navbar {
+    position: fixed !important;
+    top: 25px;
+    left: 0;
+    right: 0;   
+}
+
+
+.is-sticky .navbar .container {
+    background-color: $light;
+    padding-right: 0;
+    width: 95%;
+    overflow: hidden;
+    border-radius: $border-radius-large;    
+    box-shadow: $boxshadow;
+}
+
+.is-sticky .navbar-brand, .is-sticky .nav-link, .is-sticky .nav-link.active {
+    color : $dark;
+}
+
+.is-sticky .navbar-part2, .navbar-part2 {
+    background-color: $darker;
+    padding: 25px 50px 25px 25px;
+    position: relative;
+    color: $light;
+    font-weight: 500;
+}
+
+.navbar-part2 i {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 12px;
+    left: -24px;
+    font-size: 18px;
+    background: $secondary;
+    color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.is-sticky .navbar-social-icons i {
+    border-color: none;
+    font-size: $fs-small;
+    color: $darker;
+}
+
+.is-sticky .navbar-social-icons i:hover {
+    color:$dark;
+}
+
+.is-sticky .nav-link:hover, .is-sticky .nav-link.active, .nav-link:hover, .navbar-brand:hover {
+    color: $primary !important;
+}
+
+header nav.navbar {
+    transition: all 0.3s;
+    padding: 0;
+}
+
+header nav .navbar-brand {
+    color: $light;
+    font-weight: 600;
+    font-size: $fs-bigger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.is-sticky .navbar-brand{
+    padding-left: 50px;
+}
+
+header .container {
+    align-items: center !important;
+    display: flex;
+    justify-items: baseline;
+    background-color: $primary;  
+    padding: 0;
+    justify-content: center;
+}
+
+header .nav-link {
+    position: relative;
+    color: $light;
+    font-size: $fs-small;
+    font-weight: 600;
+    text-transform:capitalize;  
+}
+
+header .nav-link.active, header .nav-link:hover, header nav .navbar-brand:hover {
+    color: $dark !important;
+}
+button.navbar-toggler, button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px; 
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+h2 {
+    position: relative;
+    font-size: $fs-h2;
+    color: $secondary;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+h2::after, #product h3::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: $primary;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h3 {
+    position: relative;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.subheadline {
+    font-style: normal;
+    font-size: $fs-normal;    
+    color: $text;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.zindex-3 {
+    z-index: 3;
+}
+
+
+.hero__btn {
+    font-size: $fs-small;
+    border-radius: $border-radius-large;
+    min-width: 125px;
+    background: $primary;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $darker;
+    border-color: $primary;
+    padding: 36px 48px;    
+    font-weight: 500;
+}
+
+.hero__btn:hover {
+    background: $light;
+    border-color: $light;
+    color:$darker;
+    box-shadow: $boxshadow;
+}
+
+.navbar-toggler:focus, .navbar-toggler {
+    
+    box-shadow: none;
+}
+
+.navbar-social-icons i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: $text;
+    font-size: $fs-small;
+}
+
+.navbar-social-icons i:hover {
+    color:$dark;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: url('https://www.stanislav-drako.cz/public/img/taxibg.webp') rgba($secondary, 0.75);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    transition: all .3s ease-in-out;
+}
+
+
+.hero h1, .hero p {
+    color: $light;
+}
+
+.hero h1 {
+    font-size: calc($fs-h1 *1.3);
+    font-weight: 900;
+    line-height: 1.2;
+    text-shadow: 2px 2px $border;
+}
+
+.hero p {
+    font-size: calc($fs-normal * 1.5);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.hero img {
+    position: absolute;
+    right: 0px;
+    bottom: -50px;
+    z-index: -1;
+}
+
+.hero .bubbles {
+    position: absolute;
+    z-index: -2;
+}
+
+.hero .bubble {
+    width: 600px;
+    height: 600px;
+    background: $gradient;
+    bottom: 0;
+    right: 0;
+    transform: rotate(45deg);
+    border: 50px solid $tertiary;
+    border-radius: 50%;
+}
+
+.hero .dots {
+    top: 0px;
+    left: -300px;
+    width: 600px;
+    height: 600px;
+    filter: greyscale(1);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 36px;
+    background: url('https://www.stanislav-drako.cz/public/img/zigzagbox.png');
+}
+
+#aboutus h2::after {
+    left: 40px;
+}
+#aboutus .hero__btn, #product .hero__btn, header .hero__btn {
+    background: $tertiary;
+    color: $darker;
+    border-color: $tertiary;
+}
+
+#aboutus {
+    background-color: $lighter;
+}
+
+#aboutus img {
+    width: 440px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 15px;   
+    box-shadow: $boxshadow;
+}
+
+#aboutus .about-info {
+    color: $darker;
+    font-weight: 700;
+    font-size: $fs-big;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+}
+
+#aboutus .about-info i {
+    color: $primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: $darker;
+    font-size: $fs-bigger;
+}
+
+#product .icon {
+    background-color: $light;
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $boxshadow;
+    border-radius: 5px;
+    padding: 15px;
+    transform: rotate(45deg);
+    z-index: 2;
+}
+#product .icon span {
+    background-color: $tertiary;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: $fs-big;
+    font-weight: 700;
+    transform: rotate(-45deg);
+}
+
+#product h3 {    
+    font-size:$fs-normal;
+    font-weight: 700;
+    color: $secondary;
+}
+
+#product p {
+    color: $darker;
+}
+
+#product .subheadline {
+    color: $text;
+}
+
+#product .product-card {
+    position: relative;
+    background: $primary;
+    transition: all 0.3s ease-in-out;
+}
+
+#product .product-card:hover {
+    transform: translateY(-16px);   
+    box-shadow: $boxshadow; 
+}
+
+#product .shadow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 80%;
+    height: 12px;
+    border-radius: 50%;
+    background:$gradient;
+    z-index: -1;
+    transform: translateX(-50%);
+    
+}
+
+#product .product-card:hover .shadow {
+    transform: translateY(0);
+}
+
+#pricing h3 {
+    font-size: $fs-big;
+    font-weight: 700;
+    color: $secondary;
+}
+
+#pricing .price {
+    font-size: $fs-normal;
+    color: $light;
+    font-weight: 500;
+    padding: 12px;
+    background-color: $dark;
+    border-radius: $border-radius-large;
+}
+
+#pricing .price-card {
+    background-color: $primary;
+}
+
+#cta {
+    background: $primary;
+}
+
+#cta h2 {
+    font-size: $fs-h2;
+}
+
+#cta h2::after {
+    display: none;
+}
+
+#cta p {
+    font-weight: 500;
+}
+
+#cta .hero__btn {
+    background-color: $darker;
+    color: $light;
+}
+
+#cta .hero__btn:hover {
+    background-color: $light;
+    color: $darker;
+}
+
+#faq .accordion-body {
+    font-size: $fs-small;
+    background-color: $lighter;
+    border-bottom-left-radius: $border-radius-small;
+    border-bottom-right-radius: $border-radius-small
+}
+
+#faq .accordion-item {
+    border: none;
+    background-color: transparent;
+    border-radius: $border-radius-small;
+    padding-bottom: 15px;
+}
+
+#faq .accordion .accordion-button.collapsed  {
+    box-shadow: none;
+    outline: none;
+    background-color: $primary;
+    border-radius: $border-radius-small;
+    border: none;
+    font-size: $fs-big;
+    font-weight: 700;
+}
+
+#faq .accordion h2::after {
+    display: none;
+}
+
+#faq .accordion .accordion-button:not(.collapsed) {
+    background-color: $lighter;
+    box-shadow: none;
+    color: $text;
+    border-radius: $border-radius-small;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+    font-size: $fs-big;
+    font-weight: 700;
+}
+
+#faq .accordion .accordion-button:not(.collapsed)::after {
+    fill: $lighter;
+}
+
+#contact-us {
+    padding-top: 40px;
+    padding-bottom: 0px;
+    background-image: linear-gradient(to right, #000 80%, rgba($darker, 0.71) 100%), url('https://www.stanislav-drako.cz/public/img/taxifooter.webp'); 
+    background-blend-mode: multiply;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $light;
+    position: relative;
+}
+
+#contact-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 36px;
+    background: url('https://www.stanislav-drako.cz/public/img/zigzagbox.png');
+}
+
+#contact-us h2, #contact-us .subheadline {
+    color: $primary;
+}
+
+#contact-us p {
+    color: $light;
+}
+
+#contact-us a {
+    color: $tertiary;
+}
+#contact-us a:hover {
+    color:$light;
+}
+
+#contact-us .footer {
+    padding-top: 80px;
+}
+#contact-us .footer .container {
+    border-top:1px solid $border;
+}
+
+@media screen and (max-width:999px) {
+
+    .hero h1 {
+        font-size: $fs-h2;
+    }   
+    
+    .hero p {
+        font-size: $fs-normal;
+    }
+    
+    h2 {
+        font-size: $fs-bigger;
+    }
+    .hero .subheadline {
+        font-size: $fs-normal;
+    }
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .hero .bubble {
+        bottom: 150px;
+        right: 150px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero .hero__btn {
+        font-size: $fs-small;
+        min-width: 150px;
+        min-height: 40px;
+        border-radius: $border-radius-small;
+        padding: 12px 32px;
+    }
+
+    .subheadline {
+        font-size: $fs-normal;
+    }    
+    .hero img {
+        width: 50%;
+    }
+
+    #aboutus img {
+        display: none;
+    }
+
+    h2, #cta h2 {
+        font-size: $fs-bigger;
+    }
+    .is-sticky .navbar {
+        padding-left: 15px;
+        padding-right: 15px;
+    } 
+    .navbar .container {
+        background-color: $primary;
+    }
+    .is-sticky .navbar .container {
+        background-color: $light;
+        padding-left: 10px;
+        border-radius: $border-radius-small;
+    }
+    .is-sticky .navbar .container .navbar-brand {
+        padding-left: 0px;
+    }
+    #contact-us {
+        background-size: cover;
+    }
+}
+
+
+

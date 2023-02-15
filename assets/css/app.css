@@ -1,0 +1,610 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #686E85;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+header {
+  position: relative;
+  transition: all 0.3s;
+  background: linear-gradient(to right, #FFC000 50%, #111111 50%);
+}
+
+header .sticky-wrapper {
+  position: relative;
+  z-index: 222;
+  height: auto !important;
+}
+
+header .sticky-wrapper.is-sticky {
+  animation: show 0.31s linear;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.is-sticky .navbar {
+  position: fixed !important;
+  top: 25px;
+  left: 0;
+  right: 0;
+}
+
+.is-sticky .navbar .container {
+  background-color: #fff;
+  padding-right: 0;
+  width: 95%;
+  overflow: hidden;
+  border-radius: 100px;
+  box-shadow: 0px 0px 14px rgba(36, 36, 36, 0.28);
+}
+
+.is-sticky .navbar-brand, .is-sticky .nav-link, .is-sticky .nav-link.active {
+  color: #242424;
+}
+
+.is-sticky .navbar-part2, .navbar-part2 {
+  background-color: #111111;
+  padding: 25px 50px 25px 25px;
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+}
+
+.navbar-part2 i {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 12px;
+  left: -24px;
+  font-size: 18px;
+  background: #111111;
+  color: #FFC000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.is-sticky .navbar-social-icons i {
+  border-color: none;
+  font-size: 16px;
+  color: #111111;
+}
+
+.is-sticky .navbar-social-icons i:hover {
+  color: #242424;
+}
+
+.is-sticky .nav-link:hover, .is-sticky .nav-link.active, .nav-link:hover, .navbar-brand:hover {
+  color: #FFC000 !important;
+}
+
+header nav.navbar {
+  transition: all 0.3s;
+  padding: 0;
+}
+
+header nav .navbar-brand {
+  color: #fff;
+  font-weight: 600;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-sticky .navbar-brand {
+  padding-left: 50px;
+}
+
+header .container {
+  align-items: center !important;
+  display: flex;
+  justify-items: baseline;
+  background-color: #FFC000;
+  padding: 0;
+  justify-content: center;
+}
+
+header .nav-link {
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+header .nav-link.active, header .nav-link:hover, header nav .navbar-brand:hover {
+  color: #242424 !important;
+}
+
+button.navbar-toggler, button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  position: relative;
+  font-size: 42px;
+  color: #111111;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+h2::after, #product h3::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #FFC000;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h3 {
+  position: relative;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.subheadline {
+  font-style: normal;
+  font-size: 18px;
+  color: #686E85;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.zindex-3 {
+  z-index: 3;
+}
+
+.hero__btn {
+  font-size: 16px;
+  border-radius: 100px;
+  min-width: 125px;
+  background: #FFC000;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111111;
+  border-color: #FFC000;
+  padding: 36px 48px;
+  font-weight: 500;
+}
+
+.hero__btn:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #111111;
+  box-shadow: 0px 0px 14px rgba(36, 36, 36, 0.28);
+}
+
+.navbar-toggler:focus, .navbar-toggler {
+  box-shadow: none;
+}
+
+.navbar-social-icons i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #686E85;
+  font-size: 16px;
+}
+
+.navbar-social-icons i:hover {
+  color: #242424;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url("https://www.stanislav-drako.cz/public/img/taxibg.webp") rgba(17, 17, 17, 0.75);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero h1, .hero p {
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 72.8px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-shadow: 2px 2px #242423;
+}
+
+.hero p {
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.hero img {
+  position: absolute;
+  right: 0px;
+  bottom: -50px;
+  z-index: -1;
+}
+
+.hero .bubbles {
+  position: absolute;
+  z-index: -2;
+}
+
+.hero .bubble {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #FFC000 0%, #111111 100%);
+  bottom: 0;
+  right: 0;
+  transform: rotate(45deg);
+  border: 50px solid #FFD532;
+  border-radius: 50%;
+}
+
+.hero .dots {
+  top: 0px;
+  left: -300px;
+  width: 600px;
+  height: 600px;
+  filter: greyscale(1);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 36px;
+  background: url("https://www.stanislav-drako.cz/public/img/zigzagbox.png");
+}
+
+#aboutus h2::after {
+  left: 40px;
+}
+
+#aboutus .hero__btn, #product .hero__btn, header .hero__btn {
+  background: #FFD532;
+  color: #111111;
+  border-color: #FFD532;
+}
+
+#aboutus {
+  background-color: #F6F7FA;
+}
+
+#aboutus img {
+  width: 440px;
+  height: 440px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0px 0px 14px rgba(36, 36, 36, 0.28);
+}
+
+#aboutus .about-info {
+  color: #111111;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+#aboutus .about-info i {
+  color: #FFC000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #111111;
+  font-size: 26px;
+}
+
+#product .icon {
+  background-color: #fff;
+  width: 96px;
+  height: 96px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 14px rgba(36, 36, 36, 0.28);
+  border-radius: 5px;
+  padding: 15px;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+#product .icon span {
+  background-color: #FFD532;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  transform: rotate(-45deg);
+}
+
+#product h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111111;
+}
+
+#product p {
+  color: #111111;
+}
+
+#product .subheadline {
+  color: #686E85;
+}
+
+#product .product-card {
+  position: relative;
+  background: #FFC000;
+  transition: all 0.3s ease-in-out;
+}
+
+#product .product-card:hover {
+  transform: translateY(-16px);
+  box-shadow: 0px 0px 14px rgba(36, 36, 36, 0.28);
+}
+
+#product .shadow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80%;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFC000 0%, #111111 100%);
+  z-index: -1;
+  transform: translateX(-50%);
+}
+
+#product .product-card:hover .shadow {
+  transform: translateY(0);
+}
+
+#pricing h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+}
+
+#pricing .price {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  padding: 12px;
+  background-color: #242424;
+  border-radius: 100px;
+}
+
+#pricing .price-card {
+  background-color: #FFC000;
+}
+
+#cta {
+  background: #FFC000;
+}
+
+#cta h2 {
+  font-size: 42px;
+}
+
+#cta h2::after {
+  display: none;
+}
+
+#cta p {
+  font-weight: 500;
+}
+
+#cta .hero__btn {
+  background-color: #111111;
+  color: #fff;
+}
+
+#cta .hero__btn:hover {
+  background-color: #fff;
+  color: #111111;
+}
+
+#faq .accordion-body {
+  font-size: 16px;
+  background-color: #F6F7FA;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#faq .accordion-item {
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+  padding-bottom: 15px;
+}
+
+#faq .accordion .accordion-button.collapsed {
+  box-shadow: none;
+  outline: none;
+  background-color: #FFC000;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#faq .accordion h2::after {
+  display: none;
+}
+
+#faq .accordion .accordion-button:not(.collapsed) {
+  background-color: #F6F7FA;
+  box-shadow: none;
+  color: #686E85;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#faq .accordion .accordion-button:not(.collapsed)::after {
+  fill: #F6F7FA;
+}
+
+#contact-us {
+  padding-top: 40px;
+  padding-bottom: 0px;
+  background-image: linear-gradient(to right, #000 80%, rgba(17, 17, 17, 0.71) 100%), url("https://www.stanislav-drako.cz/public/img/taxifooter.webp");
+  background-blend-mode: multiply;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #fff;
+  position: relative;
+}
+
+#contact-us::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 36px;
+  background: url("https://www.stanislav-drako.cz/public/img/zigzagbox.png");
+}
+
+#contact-us h2, #contact-us .subheadline {
+  color: #FFC000;
+}
+
+#contact-us p {
+  color: #fff;
+}
+
+#contact-us a {
+  color: #FFD532;
+}
+
+#contact-us a:hover {
+  color: #fff;
+}
+
+#contact-us .footer {
+  padding-top: 80px;
+}
+
+#contact-us .footer .container {
+  border-top: 1px solid #242423;
+}
+
+@media screen and (max-width: 999px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  .hero .subheadline {
+    font-size: 18px;
+  }
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .hero .bubble {
+    bottom: 150px;
+    right: 150px;
+    width: 300px;
+    height: 300px;
+  }
+  .hero .hero__btn {
+    font-size: 16px;
+    min-width: 150px;
+    min-height: 40px;
+    border-radius: 5px;
+    padding: 12px 32px;
+  }
+  .subheadline {
+    font-size: 18px;
+  }
+  .hero img {
+    width: 50%;
+  }
+  #aboutus img {
+    display: none;
+  }
+  h2, #cta h2 {
+    font-size: 26px;
+  }
+  .is-sticky .navbar {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .navbar .container {
+    background-color: #FFC000;
+  }
+  .is-sticky .navbar .container {
+    background-color: #fff;
+    padding-left: 10px;
+    border-radius: 5px;
+  }
+  .is-sticky .navbar .container .navbar-brand {
+    padding-left: 0px;
+  }
+  #contact-us {
+    background-size: cover;
+  }
+}/*# sourceMappingURL=app.css.map */
